@@ -1,0 +1,711 @@
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  transition: ease-out 1s;
+}
+header.timbul {
+  background-color: #205072;
+  position: fixed;
+  transition: 1s;
+}
+header .logo {
+  float: left;
+  margin-left: 2.5%;
+}
+header ul {
+  float: right;
+  margin-right: 2.5%;
+}
+header ul li {
+  float: left;
+  list-style: none;
+}
+header li a,
+header .logo a {
+  float: left;
+  color: #205072;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-family: "Segoe UI";
+  font-weight: 500;
+  font-size: large;
+  text-transform: uppercase;
+  transition: ease-out 1s;
+}
+header.timbul li a,
+header.timbul .logo a {
+  color: white;
+  transition: 1s;
+}
+#pendek-equal,
+#pendek-x {
+  display: none;
+  color: #205072;
+  margin-right: 30px;
+  font-size: 32.5px;
+  cursor: pointer;
+  font-family: "Segoe UI";
+  user-select: none;
+}
+.content {
+  height: auto;
+}
+/* --------------------------------------------------------- */
+#banner {
+  height: 500px;
+  background-image: url("./assets/images/bg-image.jpg");
+  background-size: cover;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* padding: 50px; */
+  display: flex;
+}
+#banner .box-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  opacity: 0.55;
+  background-position: center;
+}
+#banner .box-content {
+  position: relative;
+  /* margin: 150px 35%; */
+  margin: auto auto;
+
+  max-width: 400px;
+  max-height: 200px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  color: #000;
+  width: 100%;
+}
+#banner .box-content h3 {
+  position: relative;
+  margin: 60px 10%;
+  text-transform: capitalize;
+  z-index: 2;
+  text-align: center;
+  font-size: 2rem;
+  font-family: fantasy;
+  color: #205072;
+  text-shadow: 2px 2px 7.5px white;
+}
+/* --------------------------------------------------------- */
+#about {
+  height: 500px;
+  background-image: linear-gradient(to top right, white, #cff4d2);
+}
+.content-about {
+  padding: 75px 20%;
+  height: auto;
+}
+.content-about * {
+  float: left;
+  align-items: center;
+}
+.content-about .judul {
+  margin-bottom: 25px;
+  float: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: #105072;
+  font-family: fantasy;
+}
+.content-about .foto-profil img {
+  height: 250px;
+}
+.content-about .foto-profil {
+  border-radius: 35px 0;
+  border: white 7.5px solid;
+  box-shadow: 1px 2px 10px white;
+  overflow: hidden;
+  margin-left: 5%;
+  transition: 0.5s;
+}
+.content-about .foto-profil.loading {
+  border-radius: 35px 0;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+  margin-left: 5%;
+  transition: 0.5s;
+}
+.content-about .desc {
+  width: 55%;
+  margin: 3%;
+  display: inline;
+  font-size: large;
+  font-family: fantasy;
+  color: #105072;
+}
+.content-about .desc h4 {
+  margin-top: 15px;
+  text-align: justify;
+  font-size: medium;
+}
+/* ------------------------------------------------------- */
+#education {
+  height: 425px;
+  background-image: linear-gradient(to bottom left, #329d9c, #56c596);
+  color: white;
+  padding: 10px 10%;
+}
+#education .judul-edu {
+  margin-top: 100px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: fantasy;
+}
+.bar {
+  margin-top: 75px;
+}
+.bar li {
+  float: left;
+  list-style: none;
+  width: 50%;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1.75px;
+}
+.bar li .titik {
+  width: 20px;
+  height: 20px;
+  border: 3px solid white;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+  background-color: #205072;
+}
+#time-content {
+  padding: 0 10px;
+}
+#time-content a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+#time-content h4 {
+  margin-top: 10px;
+}
+#line {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  margin-top: 85px;
+  left: 0%;
+  z-index: 2;
+}
+/* ------------------------------------------------------- */
+#skill {
+  height: 300px;
+  background-image: linear-gradient(to bottom left, white, #cff4d2);
+  padding: 50px 10%;
+  text-align: center;
+  color: #205072;
+}
+#skill .skill-top {
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-family: fantasy;
+}
+.skill-1,
+.skill-2,
+.skill-3,
+.skill-4 {
+  margin-top: 60px;
+  float: left;
+  width: 25%;
+  font-family: fantasy;
+  text-transform: uppercase;
+}
+.icon {
+  font-size: 2rem;
+  border: solid 5px #205072;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+}
+.icon i {
+  margin-top: 7.5px;
+}
+.skill-1 h4,
+.skill-2 h4,
+.skill-3 h4,
+.skill-4 h4 {
+  margin-top: 25px;
+}
+/* ------------------------------------------------------- */
+footer {
+  height: auto;
+  background-color: white;
+  font-family: sans-serif;
+}
+footer a,
+footer h4 {
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 100;
+}
+footer i {
+  font-size: 22.5px;
+}
+footer .copyright {
+  height: 30px;
+  margin-top: 0%;
+  background-color: #000;
+  color: white;
+  font-size: larger;
+  text-transform: capitalize;
+  text-align: center;
+  padding-top: 15px;
+}
+/* #body.scroll-lost {
+  overflow: hidden;
+} */
+/* ------------------------------------------------------- */
+@media screen and (max-width: 1200px) {
+  * {
+    transition: 1s;
+  }
+  #banner .box-content {
+    margin: 150px 30%;
+  }
+}
+@media screen and (max-width: 1025px) {
+  * {
+    transition: 1s;
+  }
+  #banner .box-content {
+    margin: 150px 25%;
+  }
+  #about .content-about {
+    padding: 75px 10%;
+  }
+}
+@media screen and (max-width: 950px) {
+  * {
+    transition: 1s;
+  }
+  header ul li a {
+    display: none;
+  }
+  #pendek-equal.muncul {
+    display: block;
+    text-align: right;
+  }
+  #box-header {
+    display: none;
+  }
+  #box-header.muncul {
+    display: block;
+    position: absolute;
+    background-color: #205072;
+    color: white;
+    height: 275px;
+    width: 235px;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+    z-index: -1;
+    box-shadow: 1px 2px 5px black;
+  }
+  #pendek-x.muncul {
+    text-align: right;
+    display: block;
+    color: white;
+    position: absolute;
+    margin-left: 217.5px;
+    margin-top: 10px;
+    font-size: 30px;
+  }
+  header ul {
+    width: 265px;
+  }
+  header ul li a.muncul {
+    margin-top: 10px;
+    display: block;
+    color: white;
+    width: 175px;
+  }
+  #top-1 {
+    margin-top: 12.5px;
+  }
+  header {
+    background-color: #205072;
+    position: fixed;
+    height: 45px;
+  }
+  header #pendek-equal {
+    color: white;
+  }
+  header .logo a {
+    color: white;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  #about .content-about .desc {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 780px) {
+  #banner {
+    background-position: -80px;
+  }
+  #about .content-about {
+    padding: 75px 2.5%;
+  }
+  #skill {
+    height: 425px;
+  }
+  .skill-1,
+  .skill-2,
+  .skill-3,
+  .skill-4 {
+    margin: 50px 12.5% 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  #about .content-about .desc {
+    width: 50%;
+  }
+  #about .content-about .desc h4 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 715px) {
+  #banner .box-content {
+    margin: 150px 15%;
+    max-width: 400px;
+    max-height: 200px;
+  }
+}
+@media screen and (max-width: 650px) {
+  #about {
+    height: 530px;
+  }
+  #about .content-about #foto {
+    margin-top: 5%;
+  }
+  #about .content-about .desc {
+    margin-top: 2.5px;
+  }
+  #about .content-about .desc h4 {
+    margin-top: 7.5px;
+    width: 87.5%;
+  }
+  #education {
+    height: 650px;
+  }
+  #education .judul-edu {
+    margin-top: 50px;
+  }
+  .bar::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1150px;
+    height: 270px;
+    width: 4px;
+    background-color: white;
+    margin-left: 50%;
+  }
+  .bar {
+    margin-top: 40px;
+  }
+  .bar li {
+    width: 200px;
+    margin-top: 50px;
+  }
+  .bar li .titik {
+    margin: 0px;
+  }
+  #time-content {
+    float: left;
+  }
+  .bar li:nth-child(2n-1) {
+    margin-left: 47.5%;
+  }
+  .bar li:nth-child(2n-1) .titik {
+    float: left;
+  }
+  .bar li:nth-child(2n) {
+    margin-left: 12.5%;
+    margin-right: 20%;
+  }
+  .bar li:nth-child(2n) .titik {
+    float: right;
+  }
+  #line {
+    display: none;
+  }
+}
+@media screen and (max-width: 620px) {
+  .bar li:nth-child(2n) {
+    margin-left: 11.5%;
+  }
+}
+@media screen and (max-width: 610px) {
+  .bar li:nth-child(2n) {
+    margin-left: 10.5%;
+  }
+}
+@media screen and (max-width: 586px) {
+  #banner {
+    background-position: -200px;
+    padding: 50px 7.5%;
+  }
+  #banner .box-content {
+    margin: 150px 5%;
+  }
+  .bar li:nth-child(2n) {
+    margin-left: 8.75%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .bar li:nth-child(2n) {
+    margin-left: 8.25%;
+  }
+}
+@media screen and (max-width: 565px) {
+  #about {
+    height: 700px;
+  }
+  #about .content-about .foto-profil {
+    margin: 0 27.5%;
+  }
+  #about .content-about .desc {
+    width: 80%;
+    margin: 10% 12.5%;
+    margin-top: 7.5%;
+    margin-left: 10%;
+  }
+  #about .content-about .desc h2 {
+    margin: 0 12.5%;
+    text-align: center;
+  }
+  #about .content-about .desc h4 {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .bar::before {
+    top: 1425px;
+  }
+}
+@media screen and (max-width: 560px) {
+  #about {
+    height: 720px;
+  }
+  .bar::before {
+    top: 1455px;
+  }
+  .bar {
+    margin-top: 55px;
+  }
+  .bar li:nth-child(2n) {
+    margin-left: 7.25%;
+  }
+  #about .content-about .desc h2 {
+    margin: 0 10%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 540px) {
+  .bar li:nth-child(2n) {
+    margin-left: 5.75%;
+  }
+}
+@media screen and (max-width: 530px) {
+  .bar li:nth-child(2n) {
+    margin-left: 4.25%;
+  }
+}
+@media screen and (max-width: 520px) {
+  #about .content-about .foto-profil {
+    margin: 0 25%;
+  }
+  #about .content-about .desc h2 {
+    margin: 0 7.5%;
+  }
+  #skill {
+    padding: 10px;
+    height: 450px;
+  }
+  .skill-1,
+  .skill-2,
+  .skill-3,
+  .skill-4 {
+    margin: 50px 10% 0 12.5%;
+  }
+}
+@media screen and (max-width: 510px) {
+  .bar li:nth-child(2n) {
+    margin-left: 1.75%;
+  }
+}
+@media screen and (max-width: 505px) {
+  #about {
+    height: 735px;
+  }
+  .bar li:nth-child(2n) {
+    margin-left: 2.25%;
+  }
+}
+@media screen and (max-width: 490px) {
+  .bar li:nth-child(2n) {
+    margin-left: 1%;
+  }
+}
+@media screen and (max-width: 475px) {
+  #about {
+    height: 750px;
+  }
+  #about .content-about .desc h2 {
+    margin: 0 5%;
+  }
+  .bar {
+    margin-top: 0px;
+  }
+  .bar::before {
+    top: 1455px;
+    margin-left: 35%;
+  }
+  .bar li:nth-child(2n) .titik {
+    float: left;
+  }
+  .bar li:nth-child(2n),
+  .bar li:nth-child(2n-1) {
+    margin-left: 28%;
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #about .content-about .desc h2 {
+    margin: 0 2.5%;
+  }
+}
+@media screen and (max-width: 425px) {
+  #about {
+    height: 750px;
+  }
+  #about .content-about .desc h2 {
+    margin: 0;
+  }
+  .bar::before {
+    top: 1500px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #about {
+    height: 800px;
+  }
+}
+@media screen and (max-width: 405px) {
+  #about {
+    height: 820px;
+  }
+  .bar li:nth-child(1) {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 384px) {
+  #box-header.muncul {
+    width: 600px;
+    padding-right: 0px;
+    margin-top: 0px;
+  }
+  #pendek-x.muncul {
+    margin-left: 225px;
+    margin-top: 5px;
+  }
+  header {
+    height: 50px;
+  }
+  header .logo a {
+    font-size: 22.5px;
+  }
+  header ul {
+    width: 65px;
+  }
+  header ul.muncul {
+    width: 265px;
+  }
+  header ul li a.muncul {
+    margin-top: 10px;
+    display: block;
+    color: white;
+    width: 175px;
+  }
+  #top-1 {
+    margin-top: 5px;
+  }
+  #banner {
+    background-position: -250px;
+    padding: 50px 5%;
+  }
+  #banner .box-content {
+    margin: 150px 0%;
+  }
+  #about .content-about .foto-profil {
+    margin: 0 22.5%;
+  }
+}
+@media screen and (max-width: 378px) {
+  #banner .box-content h3 {
+    margin: 62.5px 0;
+  }
+  #about {
+    height: 840px;
+  }
+  #about .content-about .foto-profil {
+    margin: 0 20%;
+  }
+  .bar li:nth-child(2n),
+  .bar li:nth-child(2n-1) {
+    margin-left: 15%;
+  }
+  .bar::before {
+    top: 1540px;
+    margin-left: 25%;
+  }
+  .bar li:nth-child(1) {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 334px) {
+  #education {
+    padding: 10px;
+    height: 600px;
+  }
+  #education .judul-edu {
+    margin-top: 25px;
+  }
+  .bar li:nth-child(2n),
+  .bar li:nth-child(2n-1) {
+    margin-left: 15%;
+  }
+  .bar::before {
+    top: 1540px;
+    margin-left: 20.5%;
+  }
+  #about {
+    height: 860px;
+  }
+}
